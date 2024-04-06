@@ -1,0 +1,22 @@
+#!/bin/bash -l
+#PBS -N AFFINITY
+#PBS -l select=2:ngpus=8
+#PBS -l walltime=0:10:00
+#PBS -q debug
+#PBS -A ALCFAITP
+
+NNODES=`wc -l < $PBS_NODEFILE`
+NRANKS=4 # Number of MPI ranks to spawn per node
+NDEPTH=8 # Number of hardware threads per rank (i.e. spacing between MPI ranks)
+NTHREADS=8 # Number of software threads per rank to launch (i.e. OMP_NUM_THREADS)
+
+NTOTRANKS=$(( NNODES * NRANKS ))
+
+echo "NUM_OF_NODES= ${NNODES} TOTAL_NUM_RANKS= ${NTOTRANKS} RANKS_PER_NODE= ${NRANKS} THREADS_PER_RANK= ${NTHREADS}"
+
+
+module load conda/2023-10-04
+conda activate base
+
+cd /home/bilgin/ai-science-training-series/06_parallel_training/2022/06_distributedTraining/homework
+mpirun --np ${NTOTRANKS} -ppn ${NRANKS} python tensorflow2_mnist_hvd.py

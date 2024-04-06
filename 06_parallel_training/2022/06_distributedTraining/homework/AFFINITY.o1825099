@@ -1,0 +1,5 @@
+NUM_OF_NODES= 2 TOTAL_NUM_RANKS= 8 RANKS_PER_NODE= 4 THREADS_PER_RANK= 8
+8
+Length of gpus =  4
+Epoch - 0, step #000000/000003	Loss: 2.311199
+E[0], train Loss: 38.567036, training Acc: 0.113, val loss: 0.000, val Acc: 0.000	 Time: 14.200 seconds
