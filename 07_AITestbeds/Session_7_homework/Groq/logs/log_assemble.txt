@@ -1,2 +1,0 @@
-Running Groq Assembler
-Groq Assembler has exited
