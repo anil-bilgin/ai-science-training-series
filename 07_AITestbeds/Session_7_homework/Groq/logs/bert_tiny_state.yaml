@@ -1,0 +1,111 @@
+build_status: successful_build
+cache_dir: /home/bilgin/.cache/groqflow
+config:
+  assembler_flags:
+  - --ifetch-from-self
+  - --ifetch-slice-ordering=round-robin
+  auto_name: true
+  build_name: bert_tiny
+  compiler_flags: []
+  groqcard: A1.4
+  groqview: false
+  num_chips: null
+  onnx_opset: 16
+  sequence:
+  - default
+  topology: Dragonfly
+downcast_applied: true
+expected_input_dtypes:
+  attention_mask: bool
+  input_ids: int32
+expected_input_shapes:
+  attention_mask: !!python/tuple
+  - 1
+  - 256
+  input_ids: !!python/tuple
+  - 1
+  - 256
+expected_output_names:
+- '305'
+groqflow_version: 4.3.1
+info:
+  all_build_stages:
+  - export_pytorch
+  - optimize_onnx
+  - check_compatibility
+  - fp16_conversion
+  - compile
+  - assemble
+  assembler_command: aa-latest /home/bilgin/.cache/groqflow/bert_tiny/compile/output.aa
+    --output-iop /home/bilgin/.cache/groqflow/bert_tiny/compile/output.iop --ifetch-from-self
+    --ifetch-slice-ordering=round-robin
+  assembler_success: true
+  backend: auto
+  base_onnx_exported: true
+  build_stage_execution_times:
+    assemble: 20.208404779434204
+    check_compatibility: 2.4963769912719727
+    compile: 9.830851554870605
+    export_pytorch: 0.3221559524536133
+    fp16_conversion: 0.3693811893463135
+    optimize_onnx: 0.22983217239379883
+  compiled_model_input_bytes: 1280
+  compiled_model_output_bytes: 4
+  compiler_command: groq-compiler --effort=standard /home/bilgin/.cache/groqflow/bert_tiny/onnx/bert_tiny-op16-opt-f16.onnx
+    --save-stats /home/bilgin/.cache/groqflow/bert_tiny/compile/stats.json -o /home/bilgin/.cache/groqflow/bert_tiny/compile/output
+  compiler_ram_bytes: 722468864
+  compiler_success: true
+  completed_build_stages:
+  - export_pytorch
+  - optimize_onnx
+  - check_compatibility
+  - fp16_conversion
+  - compile
+  - assemble
+  converted_onnx_exported: true
+  current_build_stage: null
+  deterministic_compute_latency: 4.2751111111111114e-05
+  estimated_latency: 6.280461111111111e-05
+  estimated_pcie_input_latency: 1.0053333333333334e-05
+  estimated_pcie_output_latency: 1.0000166666666668e-05
+  estimated_throughput: 15922.397771571974
+  measured_latency: 8.189475629478693e-05
+  measured_throughput: 12210.794014703672
+  num_parameters: 4385939
+  opt_onnx_all_ops_supported: true
+  opt_onnx_exported: true
+  opt_onnx_ops:
+  - Gather
+  - Add
+  - ReduceMean
+  - Sub
+  - Pow
+  - Sqrt
+  - Div
+  - Mul
+  - MatMul
+  - Reshape
+  - Transpose
+  - Unsqueeze
+  - Cast
+  - Softmax
+  - Erf
+  - Gemm
+  - Tanh
+  opt_onnx_unsupported_ops: []
+  quantized_onnx_exported: null
+  skipped_stages: 0
+  torch_importer_command: null
+  torch_importer_success: null
+  torch_script_exported: null
+intermediate_results:
+- /home/bilgin/.cache/groqflow/bert_tiny/compile/output.iop
+model_hash: 7d74ffefa54c5b4ed7f5490e703ad51c330a6a9c50151006c32c56d281c7c949
+model_type: pytorch
+monitor: true
+num_chips_used: 1
+onnxflow_version: 1.4.0
+quantization_samples: false
+rebuild: if_needed
+uid: 803209a183d4c6ffd330555b2c522fd9be68b65114e41e465b2bd5ec2eacff19
+use_sdk: true

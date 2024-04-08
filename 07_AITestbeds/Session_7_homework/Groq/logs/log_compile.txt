@@ -1,0 +1,50 @@
+[0mRunning Groq Compiler... [0m
+[2024-04-08 15:51:15] [info]	Timer: "Groq Compiler" started!
+warning: Using deprecated option: --Marshaller
+The option will not be available in next releases.
+[2024-04-08 15:51:15] [info]	Performing program analysis...
+[2024-04-08 15:51:15] [info]	Performing high-level execution planning and optimizations...
+[2024-04-08 15:51:15] [info]	Mapping the program to the GroqChip (TM)!...
+[2024-04-08 15:51:15] [info]	Performing machine-level code optimization...
+[2024-04-08 15:51:16] [info]	High-level deterministic instruction scheduling started...
+[2024-04-08 15:51:17] [info]	Detailed instruction scheduling... how's your coffee status? :)
+[2024-04-08 15:51:18] [info]	Scheduled 1683 (5%) operations (0 cycles)
+[2024-04-08 15:51:18] [info]	Scheduled 3366 (10%) operations (0 cycles)
+[2024-04-08 15:51:18] [info]	Scheduled 5049 (15%) operations (0 cycles)
+[2024-04-08 15:51:18] [info]	Scheduled 6732 (20%) operations (0 cycles)
+[2024-04-08 15:51:18] [info]	Scheduled 8415 (25%) operations (0 cycles)
+[2024-04-08 15:51:18] [info]	Scheduled 10098 (30%) operations (0 cycles)
+[2024-04-08 15:51:19] [info]	Scheduled 11781 (35%) operations (0 cycles)
+[2024-04-08 15:51:19] [info]	Scheduled 13464 (40%) operations (0 cycles)
+[2024-04-08 15:51:19] [info]	Scheduled 15147 (45%) operations (0 cycles)
+[2024-04-08 15:51:19] [info]	Scheduled 16830 (50%) operations (1971 cycles)
+[2024-04-08 15:51:19] [info]	Scheduled 18513 (55%) operations (5444 cycles)
+[2024-04-08 15:51:19] [info]	Scheduled 20196 (60%) operations (8474 cycles)
+[2024-04-08 15:51:20] [info]	Scheduled 21879 (65%) operations (12907 cycles)
+[2024-04-08 15:51:20] [info]	Scheduled 23562 (70%) operations (17148 cycles)
+[2024-04-08 15:51:20] [info]	Scheduled 25245 (75%) operations (21008 cycles)
+[2024-04-08 15:51:20] [info]	Scheduled 26928 (80%) operations (22448 cycles)
+[2024-04-08 15:51:20] [info]	Scheduled 28611 (85%) operations (25346 cycles)
+[2024-04-08 15:51:21] [info]	Scheduled 30294 (90%) operations (31871 cycles)
+[2024-04-08 15:51:21] [info]	Scheduled 31977 (95%) operations (33430 cycles)
+[2024-04-08 15:51:21] [info]	Woohoo! This is pretty much done. Just wrapping things up now.
+[2024-04-08 15:51:23] [info]	Max memory usage: 689.19 MiB
+[2024-04-08 15:51:23] [info]	Timer: "Groq Compiler" finished in 8.606s
+
+Compilation statistics:
+  On-chip compute cycle count: 38476
+  On-chip compute latency: 0.042751 milliseconds
+  Throughput ignoring IO: 23391.204907 executions/sec
+  Throughput with perfectly overlapped IO and compute: 23391.204907 executions/sec
+  Throughput with serialized IO and compute: 23350.869770 executions/sec
+  Input transfer size: 1600 Bytes
+  Input transfer time: 0.000062 milliseconds
+  Output transfer size: 320 Bytes
+  Output transfer time: 0.000012 milliseconds
+  Peak on-chip data memory usage: 80505 addresses (24.568176 MiB)
+  Number of operations in IR: 147937 operations
+  Number of scheduled operations in IR: 112198 operations
+
+Assembly written to:
+	/home/bilgin/.cache/groqflow/bert_tiny/compile/output.aa
+[0mGroq Compiler exited[0m

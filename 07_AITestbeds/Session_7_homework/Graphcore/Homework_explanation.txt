@@ -1,0 +1,11 @@
+I ran MNIST example on Graphcore by changing a few hyperparameters. The default hyperparameters were 10 epochs, a learning rate of 0.03, batch size of 8 and a test batch size of 80. 
+
+Those default parameters gave a test accuracy of 98.06%. 
+
+I only changed one hyperparameter a time and kept others constant as I was experimenting, and here are some of the findings. 
+
+Changing the number of epochs from 10 to 40 to 100 gave test accuracy results of 98.06%, 98.16% and 98.67% respectively. I haven't tried going over 100, but I believe achieving above 99% test accuracy might be possible with close to 200 or 300 epochs. I find that increasing this hyperparameter to be the most important in determining the impact on test accuracy. 
+
+Changing the batch size had a mixed impact on the test accuracy. Going from batch size of 8 to 16, 32 and 64 had mixed impacts on test accuracy. The respective test accuracies were 98.06%, 97.61%, 98.48%, and 97.58%. This isn't strictly  increasing or decreasing. I was expecting the accuracy to get slightly better with increasing batch size, as the model has more examples to learn from, ideally resulting in a more broadly applicable model. However, this wasn't the case. But maybe it's not too surprising after all, given the very high accuracy that's already achieved that's around 98%+
+
+Lastly I played around with the learning rate and changed it from 0.03 to 0.06 and then to 0.09. The impact was clear. The results accuracies were 98.06%, 97.90% and finally 96.77%. Especially with the last step, the learning rate was starting to get a little too large that I think it started impacting the accuracy on the testing dataset. 

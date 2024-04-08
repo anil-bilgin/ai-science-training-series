@@ -1,0 +1,12 @@
+/home/bilgin/miniconda3/envs/groqflow/lib/python3.10/site-packages/onnxconverter_common/float16.py:43: UserWarning: the float32 number 2.5261087444050645e-08 will be truncated to 1e-07
+  warnings.warn("the float32 number {} will be truncated to {}".format(pos_min, min_positive_val))
+/home/bilgin/miniconda3/envs/groqflow/lib/python3.10/site-packages/onnxconverter_common/float16.py:53: UserWarning: the float32 number -5.8274132186397765e-09 will be truncated to -1e-07
+  warnings.warn("the float32 number {} will be truncated to {}".format(neg_max, -min_positive_val))
+/home/bilgin/miniconda3/envs/groqflow/lib/python3.10/site-packages/onnxconverter_common/float16.py:43: UserWarning: the float32 number 9.99860318984247e-08 will be truncated to 1e-07
+  warnings.warn("the float32 number {} will be truncated to {}".format(pos_min, min_positive_val))
+/home/bilgin/miniconda3/envs/groqflow/lib/python3.10/site-packages/onnxconverter_common/float16.py:43: UserWarning: the float32 number 9.999999960041972e-13 will be truncated to 1e-07
+  warnings.warn("the float32 number {} will be truncated to {}".format(pos_min, min_positive_val))
+/home/bilgin/miniconda3/envs/groqflow/lib/python3.10/site-packages/onnxconverter_common/float16.py:50: UserWarning: the float32 number -3.4028234663852886e+38 will be truncated to -10000.0
+  warnings.warn("the float32 number {} will be truncated to {}".format(neg_min, -max_finite_val))
+	Success converting ONNX model to fp16
+	Successfully checked onnx file
