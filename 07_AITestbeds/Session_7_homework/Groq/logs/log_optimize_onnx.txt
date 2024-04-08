@@ -1,0 +1,2 @@
+	Success optimizing ONNX model
+	Successfully checked onnx file
